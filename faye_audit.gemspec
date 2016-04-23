@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Audit faye in every monitoring event"
   spec.description   = "Audit faye in every monitoring event"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ShallmentMo/faye_audit"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
