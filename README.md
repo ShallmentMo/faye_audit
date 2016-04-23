@@ -22,7 +22,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Do this in your config.ru:
+
+```ruby
+require 'faye'
+require 'faye_audit'
+
+Faye::WebSocket.load_adapter 'thin'
+FayeAudit.logger = Thin::Logging.logger # set the logger
+
+faye = Faye::RackAdapter.new(mount: '/faye', timeout: 25) do |bayeux|
+  FayeAudit.audit(bayeux) # audit bayeux
+end
+
+run faye
+
+```
 
 ## Development
 

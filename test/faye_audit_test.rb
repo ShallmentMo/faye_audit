@@ -5,7 +5,8 @@ class FayeAuditTest < Minitest::Test
     refute_nil ::FayeAudit::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_it_can_set_logger
+    FayeAudit.logger = 'any logger'
+    assert 'any logger', FayeAudit.logger
   end
 end
