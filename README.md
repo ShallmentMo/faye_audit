@@ -1,8 +1,6 @@
 # FayeAudit
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/faye_audit`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Try to audit Faye server
 
 ## Installation
 
@@ -38,6 +36,23 @@ end
 run faye
 
 ```
+
+And you will get something like this:
+
+```
+faye: { client_count: 1, channel_count: 0 }
+handshake:
+client_id: fi5zawstsmsj1kc7wig6n6jz5s3n7rp
+
+faye: { client_count: 1, channel_count: 1 }
+subscribe:
+client_id: fi5zawstsmsj1kc7wig6n6jz5s3n7rp
+channel: /server
+```
+
+## TODO
+
+Because I try to inspect into bayeux, so it might have efficiency problem. And logger to file can be slow. I should working on it.
 
 ## Development
 
